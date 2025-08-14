@@ -1,0 +1,14 @@
+class Solution:
+    def triangleType(self, nums):
+        a, b, c = sorted(nums)
+
+        # Check for valid triangle
+        if a <= 0 or a + b <= c:
+            return "none"
+
+        if a == b == c:
+            return "equilateral"
+        elif a == b or b == c:
+            return "isosceles"
+        else:
+            return "scalene"
